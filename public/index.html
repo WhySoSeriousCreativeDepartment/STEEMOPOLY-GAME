@@ -1,0 +1,792 @@
+<html>
+
+        <link rel="stylesheet" href="styles/main.css">
+
+        <!--SVG part of the game contains bord, text labels and circles that are avatars to players-->
+
+        <svg id = "board" height="650" width="650" style="font-family: arial">       
+            <rect id = "Start" x="2" y="2" width="68" height="68" stroke="black" stroke-width="2" fill="#FFFF99" /> 
+            
+            <rect id = "Spam Post 1" x="72" y="2" width="48" height="68" stroke="black" stroke-width="2" fill="#FFEE99" />    
+            <rect id = "Airdrop 1" x="122" y="2" width="48" height="68" stroke="black" stroke-width="2" fill="#66FFDD" />   
+            <rect id = "Spam Post 2" x="172" y="2" width="48" height="68" stroke="black" stroke-width="2" fill="#FFEE99" />    
+            <rect id = "Fee 1" x="222" y="2" width="48" height="68" stroke="black" stroke-width="2" fill="red" />   
+            <rect id = "Ico 1" x="272" y="2" width="48" height="68" stroke="black" stroke-width="2" fill="#CCCCCC" />  
+            <rect id = "Shit Post 1" x="322" y="2" width="48" height="68" stroke="black" stroke-width="2" fill="#FFAA88"/>
+            <rect id = "Shit Post 2" x="372" y="2" width="48" height="68" stroke="black" stroke-width="2" fill="#FFAA88"/>   
+            <rect id = "Day Trade 1" x="422" y="2" width="48" height="68" stroke="black" stroke-width="2" fill="#CCCCFF" />   
+            <rect id = "Shit Post 3" x="472" y="2" width="48" height="68" stroke="black" stroke-width="2" fill="#FFAA88" />
+            
+            <rect id = "Warning" x="522" y="2" width="68" height="68" stroke="black" stroke-width="2" fill="linen" /> 
+            
+            <rect id = "Meme Post 1" x="522" y="72" width="68" height="48" stroke="black" stroke-width="2" fill="#33FF99" />  
+            <rect id = "Meme Post 2" x="522" y="122" width="68" height="48" stroke="black" stroke-width="2" fill="#33FF99" />
+            <rect id = "Fee 2" x="522" y="172" width="68" height="48" stroke="black" stroke-width="2" fill="red" />
+            <rect id = "Meme Post 3" x="522" y="222" width="68" height="48" stroke="black" stroke-width="2" fill="#33FF99" />   
+            <rect id = "Ico 2" x="522" y="272" width="68" height="48" stroke="black" stroke-width="2" fill="#CCCCCC" />    
+            <rect id = "Photography Post 1" x="522" y="322" width="68" height="48" stroke="black" stroke-width="2" fill="#66AA99" />
+            <rect id = "Photography Post 2" x="522" y="372" width="68" height="48" stroke="black" stroke-width="2" fill="#66AA99" />
+            <rect id = "Day Trade 2" x="522" y="422" width="68" height="48" stroke="black" stroke-width="2" fill="#CCCCFF" />
+            <rect id = "Photography Post 3" x="522" y="472" width="68" height="48" stroke="black" stroke-width="2" fill="#66AA99" />
+            
+            <rect id = "Nap Time" x="522" y="522" width="68" height="68" stroke="black" stroke-width="2" fill="linen" />
+            
+            <rect id = "Chart Post 1" x="472" y="522" width="48" height="68" stroke="black" stroke-width="2" fill="#667777" />
+            <rect id = "Airdrop 2" x="422" y="522" width="48" height="68" stroke="black" stroke-width="2" fill="#66FFDD" />
+            <rect id = "Chart Post 2" x="372" y="522" width="48" height="68" stroke="black" stroke-width="2" fill="#667777" />
+            <rect id = "Chart Post 3" x="322" y="522" width="48" height="68" stroke="black" stroke-width="2" fill="#667777" />
+            <rect id = "Ico 3" x="272" y="522" width="48" height="68" stroke="black" stroke-width="2" fill="#CCCCCC" />
+            <rect id = "Life Post 1" x="222" y="522" width="48" height="68" stroke="black" stroke-width="2" fill="#337799" />
+            <rect id = "Fee 3" x="172" y="522" width="48" height="68" stroke="black" stroke-width="2" fill="red" />
+            <rect id = "Life Post 2" x="122" y="522" width="48" height="68" stroke="black" stroke-width="2" fill="#337799" />
+            <rect id = "Life Post 3" x="72" y="522" width="48" height="68" stroke="black" stroke-width="2" fill="#337799" /> 
+            
+            <rect id = "Banned!" x="2" y="522" width="68" height="68" stroke="black" stroke-width="2" fill="linen" />
+            
+            <rect id = "Steem Post 1" x="2" y="472" width="68" height="48" stroke="black" stroke-width="2" fill="#3322AA" />
+            <rect id = "Day Trade 3" x="2" y="422" width="68" height="48" stroke="black" stroke-width="2" fill="#CCCCFF" />
+            <rect id = "Steem Post 2" x="2" y="372" width="68" height="48" stroke="black" stroke-width="2" fill="#3322AA" />
+            <rect id = "Steem Post 3" x="2" y="322" width="68" height="48" stroke="black" stroke-width="2" fill="#3322AA" />
+            <rect id = "Ico 4" x="2" y="272" width="68" height="48" stroke="black" stroke-width="2" fill="#CCCCCC" /> 
+            <rect id = "Airdrop 3" x="2" y="222" width="68" height="48" stroke="black" stroke-width="2" fill="#66FFDD" />
+            <rect id = "Dev Post 1" x="2" y="172" width="68" height="48" stroke="black" stroke-width="2" fill="#330077" />
+            <rect id = "Fee 4" x="2" y="122" width="68" height="48" stroke="black" stroke-width="2" fill="red" />
+            <rect id = "Dev Post 2" x="2" y="72" width="68" height="48" stroke="black" stroke-width="2" fill="#330077" />
+    
+            <text id = "nowPlaying" x = "210" y = "150" font-size="35" ></text>
+            <text id = "dice" x = "210" y = "220" font-size="52"></text>
+            <text id = "position"  x = "210" y = "260" font-size="30"></text>
+            <text id = "price"  x = "85" y = "290" font-size="16"></text>
+    
+            <circle id = "circle0" cx="36" cy="36" r="9" stroke="grey" stroke-width="2" fill="white" />
+            <circle id = "circle1" cx="36" cy="36" r="9" stroke="grey" stroke-width="2" fill="black" />
+            <circle id = "circle2" cx="36" cy="36" r="9" stroke="grey" stroke-width="2" fill="purple" />
+            <circle id = "circle3" cx="36" cy="36" r="9" stroke="grey" stroke-width="2" fill="yellow" />
+            <circle id = "circle4" cx="36" cy="36" r="9" stroke="grey" stroke-width="2" fill="pink" />
+            <circle id = "circle5" cx="36" cy="36" r="9" stroke="grey" stroke-width="2" fill="cyan" />  
+    
+            </svg>
+
+<!--User name input and the HTML buttons-->
+    <input id = "username" type = "text">
+
+    <button id = "joinGroup1">TABLE 1</button>
+    <br /> 
+    <button id = "joinGroup2">TABLE 2</button>
+    <br />
+    <button id = "joinGroup3">TABLE 3</button>
+    <br />
+    <button id = "joinGroup4">TABLE 4</button>
+    <br />
+    <button id = "rollB">ROLL!!!</button>
+
+    <button id = "startB">START</button>
+    <button id = "nextB">NEXT</button>
+
+    <button id = "joinGame">TAKE YOUR SEAT</button>
+    <button id = "buyB">INVEST</button>
+    <button id = "sellB">SELL</button> 
+
+    <p id = "players"></p>
+
+<!--HTML div that shows wallets of the players and the bank-->
+    <div id = "column">
+    
+        <p id = "w1"></p>
+        <p id = "w2"></p>
+        <p id = "w3"></p>
+        <p id = "w4"></p>
+        <p id = "w5"></p>
+        <p id = "w6"></p>
+        <p id = "bankF"></p>
+    
+    </div>
+
+    <!--DIV for chat with all elements inside-->
+    <div id = "chatdiv" >
+   
+        <ul id="events"></ul>
+        <p id = "chat"></p>
+        <p><input id = "say" type = "text">
+        <button id = "chatB">SAY</button></p>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        var socket = io.connect();
+
+        //The board is the SVG element
+        var board = document.getElementById('board');
+
+        // Vars for HTML buttons
+        var joinB1 = document.getElementById('joinGroup1');
+        var joinB2 = document.getElementById('joinGroup2');
+        var joinB3 = document.getElementById('joinGroup3'); 
+        var joinB4 = document.getElementById('joinGroup4');  
+        var joinGame = document.getElementById('joinGame');
+        var startButton = document.getElementById('startB');
+        var rollButton = document.getElementById('rollB');
+        var nextButton = document.getElementById('nextB');
+        var chatButton = document.getElementById('chatB');
+        var buyButton = document.getElementById('buyB');
+        var sellButton = document.getElementById('sellB');
+
+        // Var for chat DIV
+        var chatdiv = document.getElementById('chatdiv');
+
+        // GAMEPLAY vars
+        // I will use the numbers to identify the players and their properties
+        var playerIDsDefault = [11, 12, 13, 14, 15, 16];
+        var playerIDs = [];
+        var wallets = [];
+        // Players start game with 1200 Steemopoly Money
+        var walletsDefault = [1200, 1200, 1200, 1200, 1200, 1200];
+        var walletLabels = [];
+        // These are IDs of the wallets that bring the info on the front end
+        var walletLabelsDefault = ['w1', 'w2', 'w3', 'w4', 'w5', 'w6'];
+        // Colors, counters and avatars
+        var playerColors = [];
+        var playerColorsDefault = ['white', 'black', 'purple', 'yellow', 'pink', 'cyan'];
+        var counter = [];
+        var counterDefault = [0, 0, 0, 0, 0, 0];
+        var circles = [];
+        var circlesDefault = ['circle0', 'circle1', 'circle2', 'circle3', 'circle4', 'circle5'];
+        // Names are used in the game and in the chat
+        var names = [];
+        // Bank always starts with 9000 Stemopoly Money
+        var bankfunds = 9000;
+        // Counter for players
+        var i = 0;
+        // Chat message text
+        var text = '';
+        // Dice and other vars for later
+        var dice = 0;
+        var spot = 0;
+        var reward = 0;
+        // The names of each field
+        var positions = ['Start', 'Spam Post 1', 'Airdrop 1', 'Spam Post 2', 'Fee 1', 'Ico 1', 'Shit Post 1', 'Shit Post 2', 'Day Trade 1', 'Shit Post 3', 'Warning', 'Meme Post 1', 'Meme Post 2', 'Fee 2', 'Meme Post 3', 'Ico 2', 'Photography Post 1', 'Photography Post 2', 'Day Trade 2', 'Photography Post 3', 'Nap Time', 'Chart Post 1', 'Airdrop 2', 'Chart Post 2', 'Chart Post 3', 'Ico 3', 'Life Post 1', 'Fee 3', 'Life Post 2', 'Life Post 3', 'Banned!', 'Steem Post 1', 'Day Trade 3', 'Steem Post 2', 'Steem Post 3', 'Ico 4', 'Airdrop 3', 'Dev Post 1', 'Fee 4', 'Dev Post 2'];
+        var price = 0;
+        // Upvote array for 'upvoting/flagging'
+        var upvote = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]; 
+        var sellingPrice = [32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100, 102, 104, 106, 108, 110, 112];
+        // I made two completely the same arrays for identifying fields, it made easier to buy and sell properties
+        var posIDs = [200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239];
+        var posIDs2 = [200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239];
+        // The colors of the fields
+        var propColors =['#FFFF99', '#FFEE99', '#66FFDD', '#FFEE99', 'red', '#CCCCCC', '#FFAA88', '#FFAA88', '#CCCCFF', '#FFAA88', 'linen', '#33FF99', '#33FF99', 'red', '#33FF99', '#CCCCCC', '#66AA99', '#66AA99', '#CCCCFF', '#66AA99', 'linen', '#667777', '#66FFDD', '#667777', '#667777', '#CCCCCC', '#337799', 'red', '#337799', '#337799', 'linen', '#3322AA', '#CCCCFF', '#3322AA', '#3322AA', '#CCCCCC', '#66FFDD', '#330077', 'red', '#330077'];
+
+        // Airdrops, counters, daytrade and others vars needed for later
+        var airdrops = [30, 60, 90, 120, 150, 180];
+        var shits = ["Electricity bill: ", "Transaction fees: ", "Gambling loss: ", "You got flagged: ", "Charity: ", "Internet bill: ", "Blackmailed: "];
+        var fees = [100, 125, 150, 175, 200, 225];
+        var daytrade = 0;
+        var pq = 0;
+        var q = 0;
+        var air = 0;
+        var a = 0;
+        var b1 = 0;
+        var b2 = 0;
+        var c1 = 0;
+        var c2 = 0;
+        var c3 = 0;
+        var nums = [];
+
+        // The starting position of the each player
+        var centx = 36;
+        var centy = 36;
+
+        // At the beginning, many elements are hidden
+        board.style.display = 'none';
+
+        joinGame.style.display = 'none';
+        startButton.style.display = 'none';
+        rollButton.style.display = 'none';
+        nextButton.style.display = 'none';
+        buyButton.style.display = 'none';
+        sellButton.style.display = 'none';
+
+        chatdiv.style.display = 'none';
+        document.getElementById('username').style.display = 'none';
+
+        // Functions
+        function joiningGroup(room) {      
+            // This function contains a local var ROOM, the room can be from 0 to 3, depends on the clicked button
+            // Here is where the player chooses the room he wish to play in
+            socket.emit('join1', room);
+            // All other buttons are hidden and the text box for username becomes visible
+            joinB1.style.display = 'none';
+            joinB2.style.display = 'none';
+            joinB3.style.display = 'none';
+            joinB4.style.display = 'none';
+            joinGame.style.display = 'block';
+            document.getElementById('username').style.display = 'block';
+        }
+        function joiningGame() {
+            // The player is taking the seat
+            socket.emit('join2');
+            let name = document.getElementById('username').value;
+            socket.emit('join3', name);
+            document.getElementById('username').style.display = 'none';
+            joinGame.style.display = 'none';
+            socket.emit('join4');
+        }
+        function starting() {
+            // Starting the game
+            socket.emit('start1');
+            startButton.style.display = 'none';
+            socket.emit('start2');
+            socket.emit('start3');
+        }
+        function rolling () {
+            // Rolling the dicde
+            nextButton.style.display = 'block';
+            rollButton.style.display = 'none';
+            socket.emit('roll1');
+            socket.emit('start3');
+            socket.emit('roll2');
+        }
+        function nexting() {
+            // Switching to next player
+            nextButton.style.display = 'none';
+            socket.emit('next1');
+            socket.emit('next2');
+            buyButton.style.display = 'none';
+            sellButton.style.display = 'none';
+        }
+        function chatting () {
+            // Chat main function
+            text = document.getElementById('say').value;
+            socket.emit('mess1');
+            socket.emit('mess2', text);
+        }
+        function buying() {
+            // BUY property function
+            socket.emit('buy1');
+            buyButton.style.display = 'none';
+            nextButton.style.display = 'none';
+            socket.emit('next1');
+            socket.emit('next2');
+        }
+        function selling() {
+            // Sell property function
+            socket.emit('sell1')
+            sellButton.style.display = 'none '
+        }
+
+        // The most important part of the code
+        // Receiving info and data from the server
+        socket.on('join2', function(data){
+            // Main counter
+            i = data;	
+            // Pushing the data of players into the empty arrays
+            playerIDs.push(playerIDsDefault[i]);
+            wallets.push(walletsDefault[i]);
+            walletLabels.push(walletLabelsDefault[i]);
+            playerColors.push(playerColorsDefault[i]);
+            counter.push(counterDefault[i]);
+            circles.push(circlesDefault[i]);
+        });
+        socket.on('join3', function(name){
+            // Names of the players in the empty array
+            names.push(name);
+            document.getElementById('players').innerHTML = names;
+            nums.push(name);
+        });
+        socket.on('join4', function(data){
+            // Showing the start button to the first player
+            startButton.style.display = data;
+        });
+        socket.on('start1', function(data){
+            // Showing chat to all players
+            chatdiv.style.display = data;
+        });
+        socket.on('start2', function(data){
+            // Showing the roll button to the first player
+            rollButton.style.display = data;
+        });
+        socket.on('start3', function(data){
+            // Showing the wallets and the board
+            i = data;
+            document.getElementById('nowPlaying').innerHTML = names[i];
+            for (let fac1 = 0; fac1 < walletLabels.length; fac1++) {
+                document.getElementById(walletLabels[fac1]).innerHTML = wallets[fac1];
+            }
+            document.getElementById('bankF').innerHTML = 'Bank: ' + bankfunds;
+            board.style.display = 'block';
+        });
+        socket.on('roll1', function(data){
+            // Receiving dice value from the server
+            dice = data;
+            document.getElementById('dice').innerHTML = 'DICE: ' + dice;	
+            // Adding the dice value to the counter
+            counter[i] = counter[i] + dice;
+            if (counter[i]>39){
+                counter[i]=counter[i]-40;
+            }
+            // Getiing the field name through the counter
+            spot = counter[i];
+            document.getElementById('position').innerHTML = positions[spot];
+            // Calling the functions from below, explained later in the code
+            movement();
+            game();
+            upvotes();
+            props();
+        });
+        socket.on('roll2', function(data){
+            // Specific cases for the players when stopping on some fields
+            // Showing the buy button if noboy else owns the field and the player has enough money to invest
+            if (spot != 0 && spot != 2 && spot != 4 && spot != 8 && spot != 10 && spot != 13 && spot != 18 && spot != 20 && spot != 22 && spot != 27 && spot != 30 && spot != 32 && spot != 36 && spot != 38 && spot != 5 && spot != 15 && spot != 25 && spot != 35) {
+                a = 1;
+            } else a = 0;
+            if (posIDs[spot] > 199) {
+                b1 = 1;
+            } else b1 = 0;
+            if (a + b1 === 2){
+                buyButton.style.display = data;
+                if(wallets[i]<price){
+                    buyButton.style.display = 'none';
+                }
+            }
+            if (spot === 5 || spot === 15 || spot === 25 || spot === 35){
+                b2 = 1;
+            } else b2 = 0;
+            if (b1 + b2 === 2){
+                buyButton.style.display = data; 
+                if(wallets[i]<price){
+                    buyButton.style.display = 'none';
+                }
+            }
+            // Showing the sell button if a player already owns the field
+            if (posIDs[spot] === playerIDs[i]){
+                sellButton.style.display = 'block';
+            } 
+        });
+        socket.on('next1', function(data){
+            // Switching to the next player
+            i = data;
+            rollButton.style.display = 'block';
+            if (nums.length === 1) {
+                rollButton.style.display = 'none';
+                document.getElementById('price').innerHTML = 'WINNER';
+            }
+            let e = data;
+            // If player's wallet is below zero, he is skipped
+            if (wallets[e]<0) {
+                buyButton.style.display = 'none';
+                nextButton.style.display = 'none';
+                rollButton.style.display = 'none';
+                socket.emit('next1');
+                socket.emit('next2');          
+            }
+        });
+        socket.on('next2', function(data){
+            // Showing the new state of the wallets
+            i = data;
+            document.getElementById('nowPlaying').innerHTML = names[i];
+            document.getElementById('position').innerHTML = '';
+            for (let fac1 = 0; fac1 < walletLabels.length; fac1++) {
+                document.getElementById(walletLabels[fac1]).innerHTML = wallets[fac1];
+            }
+            document.getElementById('bankF').innerHTML = 'Bank: ' + bankfunds;
+            // Taking the properties from the bankrupted players
+            let e = i - 1;
+            if(e<0) {
+                e = e + playerIDs.length;
+            }
+            if (wallets[e]<0) {
+                nums = nums.filter(nn => nn != names[e])
+                 for (let bankrupt = 0; bankrupt<40; bankrupt++){
+                    if (posIDs[bankrupt] === playerIDs[e] || posIDs[bankrupt] === playerIDs[e]*2) {
+                        posIDs[bankrupt] = posIDs2[bankrupt];
+                        let places = positions[bankrupt];
+                        document.getElementById(places).setAttribute('fill', propColors[bankrupt]);
+                    }
+                }
+            }
+            for (let krr = 0; krr<circles.length; krr++) {
+                    document.getElementById(circles[krr]).style.display = 'block';
+                }
+        });
+        socket.on('buy1', function(data){
+            // Defining and coloring the buyed field
+            let place = positions[spot];
+            document.getElementById(place).setAttribute('fill', playerColors[i]);
+            // Calling the INVEST function from below - explained below
+            investing();
+            wallets[i] = wallets[i] - price;
+            bankfunds = bankfunds + price;
+            document.getElementById('bankF').innerHTML = 'Bank: ' + bankfunds;
+        });
+        socket.on('sell1', function(data){
+            // Selling the field
+            if (posIDs[spot] === playerIDs[i]){
+               short();
+        let place = positions[spot];
+        document.getElementById(place).setAttribute('fill', propColors[spot]);
+        wallets[i] = wallets[i] + sellingPrice[spot];
+            }
+        })
+        socket.on('mess1', function(data){
+            // Making the name of the player visible to others in the chat room
+           i = data;
+        });
+        socket.on('mess2', function(data){
+            // Setting the each chat message as the event inside the html div
+            let parent = document.getElementById('events');
+            let child = document.createElement('child');
+            child.innerHTML = names[i] + ': ' + data + "<br />";
+            parent.appendChild(child);
+            document.getElementById('say').value = '';
+        });
+
+        // functions for JoiningRoom function with the numbers instead of the ROOMS local var
+        function joinG1() {joiningGroup(0)};
+        function joinG2() {joiningGroup(1)};
+        function joinG3() {joiningGroup(2)};
+        function joinG4() {joiningGroup(3)};
+
+        // Connecting the buttons to the functions
+        joinB1.addEventListener('click', joinG1);
+        joinB2.addEventListener('click', joinG2);
+        joinB3.addEventListener('click', joinG3);
+        joinB4.addEventListener('click', joinG4);
+        joinGame.addEventListener('click', joiningGame);
+        startButton.addEventListener('click', starting);
+        chatButton.addEventListener('click', chatting);
+        rollButton.addEventListener('click', rolling);
+        nextButton.addEventListener('click', nexting);
+        buyButton.addEventListener('click', buying);
+        sellButton.addEventListener('click', selling);
+
+        function game() {
+            // The most important function in the game
+            // The price depends on the type and position of a field
+            // For 'content' fields
+            if (spot != 0 && spot != 2 && spot != 4 && spot != 8 && spot != 10 && spot != 13 && spot != 18 && spot != 20 && spot != 22 && spot != 27 && spot != 30 && spot != 32 && spot != 36 && spot != 38 && spot != 5 && spot != 15 && spot != 25 && spot != 35){
+            price = 60 + (spot*4);
+            document.getElementById('price').innerHTML = 'Price: ' + price;
+            }
+            // for 'ICO' fields
+            if (spot === 5 || spot === 15 || spot === 25 || spot === 35){
+                price = 50 + spot*2;
+                document.getElementById('price').innerHTML = 'Price: ' + price;
+            }
+            // for AIRDROP fields
+            if (spot === 2 || spot === 22 || spot === 36) {   
+               wallets[i] = wallets[i] + airdrops[air];
+               document.getElementById('price').innerHTML = 'Airdrop: ' + airdrops[air];
+               bankfunds = bankfunds - airdrops[air];   
+               air++;
+               if(air===6){
+                   air = 0;
+               }
+            }
+            // For daytrade fields
+            if (spot === 8 || spot === 18 || spot === 32){
+                daytrade = 125;
+               wallets[i] = wallets[i] + daytrade;
+               document.getElementById('price').innerHTML = 'Daytrade: ' + daytrade;
+               bankfunds = bankfunds - daytrade;
+            }   
+            // For FEES fields
+            if (spot === 4 || spot === 13 || spot === 27 || spot === 38) { 
+               wallets[i] = wallets[i] - fees[q];
+               document.getElementById('price').innerHTML = shits[pq] + fees[q];
+               bankfunds = bankfunds + fees[q];
+               pq++;
+               q++;
+               if(q===6){
+                   q = 0;
+               }
+               if(pq===7){
+                   pq=0;
+               }
+            }   
+            if (spot === 10) {
+               document.getElementById('price').innerHTML = "Take it easy, the Tax office is behind your back";
+            }
+            // If you step on the TAX office field, you are transferred to the warning field and charged with 300 Steemopoly Money
+            if (spot === 30) {
+               document.getElementById('price').innerHTML = "Tax office penalties: - 300 !!!";
+               wallets[i] = wallets[i] - 300;
+               bankfunds = bankfunds + 300;
+               counter[i] = 10;
+               centx = 556;
+               centy = 36;
+               document.getElementById(circles[i]).setAttribute("cx", centx);
+               document.getElementById(circles[i]).setAttribute("cy", centy);
+            }
+            document.getElementById('bankF').innerHTML = 'Bank: ' + bankfunds;
+        }
+
+        function props() {
+            // Handling the specific cases when a player steps on a specific field
+            for(let brr = 0; brr<names.length; brr++){
+               if(brr != i){
+                   // If another player owns a content field
+                  if (posIDs[spot]===playerIDs[brr]){
+                     document.getElementById('price').innerHTML = 'Your comment on this post by ' + names[brr] +' was flagged for ' + upvote[spot]*2;
+                     wallets[i] = wallets[i] - upvote[spot]*2;
+                     wallets[brr] = wallets[brr] + upvote[spot]*2;
+                     document.getElementById('bankF').innerHTML = 'Bank: ' + bankfunds;
+                  }
+                  // If the actual player holds a content field
+                  if (posIDs[spot]===playerIDs[i]){
+                     document.getElementById('price').innerHTML = 'Already yours! Upvoted for' + upvote[spot];
+                     wallets[i] = wallets[i] + upvote[spot];
+                     bankfunds = bankfunds - upvote[spot];
+                     document.getElementById('bankF').innerHTML = 'Bank: ' + bankfunds;
+                  }
+                  // If a player owns an ICO field
+                  if (posIDs[spot]===playerIDs[i]*2){
+                     reward = price*3;
+                     document.getElementById('price').innerHTML = 'Rewarded' + reward;
+                     wallets[i] = wallets[i] + reward;
+                     bankfunds = bankfunds - reward;
+                     posIDs[spot] = posIDs2[spot];
+                     document.getElementById('bankF').innerHTML = 'Bank: ' + bankfunds;
+                     let places = positions[spot];
+                     document.getElementById(places).setAttribute('fill', propColors[spot]);
+                     }
+                  }
+                }
+        }
+
+        function upvotes() {
+            // If a player holds a whole group of content fields, upvote increases
+            if ( posIDs[1] ===  posIDs[3]) {
+                upvote[1] = 28;
+                upvote[3] = 36;
+            }
+            if ( posIDs[6] ===  posIDs[7] &&  posIDs[6] ===  posIDs[9]) {
+                upvote[6] = 48;
+                upvote[7] = 52;
+                upvote[9] = 60;
+            }
+            if ( posIDs[11] ===  posIDs[12] &&  posIDs[11] ===  posIDs[14]) {
+                upvote[11] = 68;
+                upvote[12] = 72;
+                upvote[14] = 80;
+            }
+            if ( posIDs[16] ===  posIDs[17] &&  posIDs[16] ===  posIDs[19]) {
+                upvote[16] = 88;
+                upvote[17] = 92;
+                upvote[19] = 100;
+            }
+            if ( posIDs[21] ===  posIDs[23] &&  posIDs[21] ===  posIDs[24]) {
+                upvote[21] = 108;
+                upvote[23] = 116;
+                upvote[24] = 120;
+            }
+            if ( posIDs[26] ===  posIDs[28] &&  posIDs[26] ===  posIDs[29]) {
+                upvote[26] = 128;
+                upvote[28] = 136;
+                upvote[29] = 140;
+            }
+            if ( posIDs[31] ===  posIDs[33] &&  posIDs[31] ===  posIDs[34]) {
+                upvote[31] = 148;
+                upvote[33] = 156;
+                upvote[34] = 160;
+            }
+            if ( posIDs[37] ===  posIDs[39]) {
+                upvote[37] = 172;
+                upvote[39] = 180;
+            }
+        }
+
+        function movement() {
+            // Handling the position of the avatars when a player rolled the dice
+            if (spot === 0){
+                centx = 36;
+                centy = 36;
+            }
+            if (spot === 1) {
+                centx = 96;
+                centy = 36;
+             }  
+            if (spot === 2) {
+                centx = 146;
+                centy = 36;
+            }  
+            if (spot === 3) {
+                centx = 196;
+                centy = 36;
+            }  
+        if (spot === 4) {
+          centx = 246;
+          centy = 36;
+        } 
+        if (spot === 5) {
+          centx = 296;
+          centy = 36;
+        } 
+        if (spot === 6) {
+          centx = 346;
+          centy = 36;
+        } 
+        if (spot === 7) {
+          centx = 396;
+          centy = 36;
+        } 
+        if (spot === 8) {
+          centx = 446;
+          centy = 36;
+        } 
+        if (spot === 9) {
+          centx = 496;
+          centy = 36;
+        } 
+
+
+        if (spot === 10) {
+          centx = 556;
+          centy = 36;
+        }
+
+
+        if (spot === 11) {
+          centx = 556;
+          centy = 96;
+        }
+        if (spot === 12) {
+          centx = 556;
+          centy = 146;
+        }
+        if (spot === 13) {
+          centx = 556;
+          centy = 196;
+        }
+        if (spot === 14) {
+          centx = 556;
+          centy = 246;
+        }
+        if (spot === 15) {
+          centx = 556;
+          centy = 296;
+        }
+        if (spot === 16) {
+          centx = 556;
+          centy = 346;
+        }
+        if (spot === 17) {
+          centx = 556;
+          centy = 396;
+        }
+        if (spot === 18) {
+          centx = 556;
+          centy = 446;
+        }
+        if (spot === 19) {
+          centx = 556;
+          centy = 496;
+        }
+
+        if (spot === 20) {
+          centx = 556;
+          centy = 556;
+        }
+
+        if (spot === 21) {
+          centx = 496;
+          centy = 556;
+        }
+        if (spot === 22) {
+          centx = 446;
+          centy = 556;
+        }
+        if (spot === 23) {
+          centx = 396;
+          centy = 556;
+        }
+        if (spot === 24) {
+          centx = 346;
+          centy = 556;
+        }
+        if (spot === 25) {
+          centx = 296;
+          centy = 556;
+        }
+        if (spot === 26) {
+          centx = 246;
+          centy = 556;
+        }
+        if (spot === 27) {
+          centx = 196;
+          centy = 556;
+        }
+        if (spot === 28) {
+          centx = 146;
+          centy = 556;
+        }
+        if (spot === 29) {
+          centx = 96;
+          centy = 556;
+        }
+
+        if (spot === 30) {
+          centx = 36;
+          centy = 556;
+        }
+
+        if (spot === 31) {
+          centx = 36;
+          centy = 496;
+        }
+        if (spot === 32) {
+          centx = 36;
+          centy = 446;
+        }
+        if (spot === 33) {
+          centx = 36;
+          centy = 396;
+        }
+        if (spot === 34) {
+          centx = 36;
+          centy = 346;
+        }
+        if (spot === 35) {
+          centx = 36;
+          centy = 296;
+        }
+        if (spot === 36) {
+          centx = 36;
+          centy = 246;
+        }
+        if (spot === 37) {
+          centx = 36;
+          centy = 196;
+        }
+        if (spot === 38) {
+          centx = 36;
+          centy = 146;
+        }
+        if (spot === 39) {
+          centx = 36;
+          centy = 96;
+        }
+
+            document.getElementById(circles[i]).setAttribute("cx", centx);
+            document.getElementById(circles[i]).setAttribute("cy", centy);
+
+        }
+
+        function investing() {
+            // If a player buys a content field or an ICO field, the position ID becomes the same ( or a double) to the players IDs
+            if (spot != 0 && spot != 2 && spot != 4 && spot != 8 && spot != 10 && spot != 13 && spot != 18 && spot != 20 && spot != 22 && spot != 27 && spot != 30 && spot != 32 && spot != 36 && spot != 38) { 
+            posIDs[spot] = playerIDs[i]*2; 
+            }
+            if (spot != 5 && spot != 15 && spot != 25 && spot != 35){
+            posIDs[spot] = playerIDs[i]; 
+            }
+        }
+
+        function short() {
+            // The position ID gets its old number when the player sells it
+                posIDs[spot] = posIDs2[spot];
+                bankfunds = bankfunds - sellingPrice[spot];
+                document.getElementById('bankF').innerHTML = 'Bank: ' + bankfunds;
+        }
+    </script>
+
+</html>
