@@ -2,6 +2,7 @@
 ___
 #### Steemopoly Game is an online multiplaywer/multitable game inspired by Steem blockchain and legendary Monopoly.
 The game rules are not like in Monopoly. Check the Steemit post to learn the rules:
+https://steemit.com/utopian-io/@dumar022/steemopoly-game-big-update-socket-io-problem-solved
 
 ___
 The version on this repository supports 4 different tables, each for 2-6 players.
