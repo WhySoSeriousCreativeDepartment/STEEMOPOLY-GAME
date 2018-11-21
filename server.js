@@ -36,6 +36,10 @@ io.on('connection', function(client) {
     client.on('join1', function(room) {
         client.join(rooms[room]);
         players[room].push(client.id);
+        let dat = players[room].length;
+        io.emit('join1', dat);
+        io.emit('room1', room);
+
     });
 });
 

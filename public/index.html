@@ -69,7 +69,6 @@
 
 <!--User name input and the HTML buttons-->
     <input id = "username" type = "text">
-
     <button id = "joinGroup1">TABLE 1</button>
     <br /> 
     <button id = "joinGroup2">TABLE 2</button>
@@ -134,6 +133,8 @@
 
         // Var for chat DIV
         var chatdiv = document.getElementById('chatdiv');
+        var joinButtons = [joinB1, joinB2, joinB3, joinB4];
+        var joinButtonsText = ['TABLE 1', 'TABLE 2', 'TABLE 3', 'TABLE 4']
 
         // GAMEPLAY vars
         // I will use the numbers to identify the players and their properties
@@ -276,6 +277,13 @@
 
         // The most important part of the code
         // Receiving info and data from the server
+        socket.on('join1', function(data){
+            // Main counter
+            let mj = data;
+            socket.on('room1', function(rr) {
+                joinButtons[rr].innerHTML = joinButtonsText[rr] + ' ' +mj+'/6';
+            })
+        });
         socket.on('join2', function(data){
             // Main counter
             i = data;	
