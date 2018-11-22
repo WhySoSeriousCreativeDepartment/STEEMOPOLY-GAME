@@ -5,6 +5,6 @@ The game rules are not like in Monopoly. Check the Steemit post to learn the rul
 https://steemit.com/utopian-io/@dumar022/steemopoly-game-big-update-socket-io-problem-solved
 
 ___
-The version on this repository supports 4 different tables, each for 2-6 players.
+The version in this repository supports 4 different tables, each for 2-6 players.
 This is a test version. In this version the nubler of players is still unlimitted and each player starts with the same amount of Steemopoly Money. That will change in the next few commits when I solve SteemConnect part. 
 
