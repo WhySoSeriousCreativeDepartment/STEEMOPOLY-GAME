@@ -210,6 +210,13 @@
         chatdiv.style.display = 'none';
         document.getElementById('username').style.display = 'none';
 
+        document.getElementById('say').addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        chatButton.click();
+    }
+});
+
         // Functions
         function joiningGroup(room) {      
             // This function contains a local var ROOM, the room can be from 0 to 3, depends on the clicked button
@@ -282,6 +289,10 @@
             let mj = data;
             socket.on('room1', function(rr) {
                 joinButtons[rr].innerHTML = joinButtonsText[rr] + ' ' +mj+'/6';
+                // Disabling the button if there are already 6 players on the table
+                if (mj>5){
+                    joinButtons[rr].disabled = true;
+                }
             })
         });
         socket.on('join2', function(data){
